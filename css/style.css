@@ -23,7 +23,7 @@ h6 {
 }
 
 body {
-  background: url('../images/background.gif') repeat;
+  background: #f2f2f2;
   font: normal 300 16px/20px 'Nunito Sans', sans-serif;
 }
 
@@ -62,7 +62,7 @@ p {
 }
 
 a {
-  color: #1199c3;
+  color: #00b96f;
   text-decoration: dotted;
   margin-top: 10px;
   display: block;
@@ -128,7 +128,7 @@ h3 {
 
 h4 {
   font-weight: 300;
-  color: #1199c3;
+  color: #009caa;
 }
 
 h2,
@@ -158,7 +158,10 @@ Sections -- header
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
-  padding: 10px;
+}
+
+.flex-item {
+  padding: 0 10px;
 }
 
 .skills-h3 {

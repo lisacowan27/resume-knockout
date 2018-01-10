@@ -4,18 +4,31 @@
   <meta charset="utf-8">
 
   <title>Lisa's Resume</title>
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
   <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600|Indie+Flower" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
-
-  <script src="http://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyAFH0aScjP_KHtvaY_I7Pqf20E1SOjGjmc"></script>
-  <meta name="viewport" content="width=device-width,initial-scale=1">
 </head>
 <body>
   <div id="container">
     <header>
       <div id="header" class="header center-content clear-fix">
-        <ul id="topContacts" class="flex-box"></ul>
+        <div class="row">
+          <div class="col-sm-12 col-md-12 col-lg-12">
+            <h1 class="h1" data-bind="text: bioName"></h1><span class="role" data-bind="text: bioRole"></span>
+            <hr/>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12 col-md-12 col-lg-12 flex-box">
+            <ul id="topContacts" class="flex-box">
+              <li class="flex-item"><span class="dark-text">mobile</span><span class="gray-text" data-bind="text: mobile"></span></li>
+              <li class="flex-item"><span class="dark-text">email</span><span class="gray-text" data-bind="text: email"></span></li>
+              <li class="flex-item"><span class="dark-text">github</span><span class="gray-text" data-bind="text: github"></span></li>
+              <li class="flex-item"><span class="dark-text">location</span><span class="gray-text" data-bind="text: bioLocation"></span></li>
+            </ul>
+          </div>
+        </div>
       </div>
     <header>
     <main>
@@ -50,30 +63,10 @@
   </div>
 
   <script src="js/jquery-3.2.1.min.js"></script>
-  <script src="js/helper.js"></script>
-  <script src="js/resumeBuilder.js"></script>
-  <script>
-    if(document.getElementsByClassName('flex-item').length === 0) {
-      document.getElementById('topContacts').style.display = 'none';
-    }
-    if(document.getElementsByTagName('h1').length === 0) {
-      document.getElementById('header').style.display = 'none';
-    }
-    if(document.getElementsByClassName('work-entry').length === 0) {
-      document.getElementById('workExperience').style.display = 'none';
-    }
-    if(document.getElementsByClassName('project-entry').length === 0) {
-      document.getElementById('projects').style.display = 'none';
-    }
-    if(document.getElementsByClassName('education-entry').length === 0) {
-      document.getElementById('education').style.display = 'none';
-    }
-    if(document.getElementsByClassName('flex-item').length === 0) {
-      document.getElementById('lets-connect').style.display = 'none';
-    }
-    /*if(document.getElementById('map') === null) {
-      document.getElementById('mapDiv').style.display = 'none';
-    }*/
+  <script src="js/knockout-3.2.0.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+
   </script>
 </body>
 </html>
