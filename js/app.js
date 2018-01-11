@@ -3,6 +3,91 @@
 // Global variables
 var ko;
 
+// Work data
+
+/*
+var places = [
+  {
+    title: 'Baraga State Park',
+    LatLng: {
+      lat: 46.749297,
+      lng: -88.476654
+    },
+    selected: false,
+    image: 'BaragaStatePark.png',
+    imageInfo: 'Bishop Baraga Shrine'
+  },
+*/
+
+
+var jobs = [
+    {
+        employer: 'Charles Schwab Platform Production',
+        jobTitle: 'Producer (contract)',
+        jobLocation: 'Austin, TX',
+        jobDates: 'July 2016 to July 2017',
+        jobDescription: [
+            'Managed a substantial queue of varied web-based projects',
+            'Published diverse content to the several proprietary content management systems',
+            'Ensured high quality standards in a team environment'
+        ]
+    },
+    {
+        employer: 'Wunderman Production',
+        jobTitle: 'Interactive Developer (short-term contract)',
+        jobLocation: 'Austin, TX',
+        jobDates: 'March 2016 to June 2016',
+        jobDescription: [
+            'Created HTML/CSS from Photoshop layouts for proprietary email automation',
+            'Tested and verified code in Litmus suite',
+            'Constructed and maintained an Excel-based tracking system of client feedback for the team'
+        ]
+
+    },
+    {
+        employer: 'Y&R Austin',
+        jobTitle: 'Senior Interactive Developer',
+        jobLocation: 'Austin, TX',
+        jobDates: 'November 2013 to March 2016',
+        jobDescription: [
+            'Programmed sites from Photoshop comps into WordPress: Agency website (yr-austin.com), Dell500 contest site (award-winning), Wildlife Rescue and Rehabilitation (wildlife-rescue.org)',
+            'Produced web-based emails from Photoshop comps and loaded into proprietary Dell email system for end users',
+            'Created departmental standards and wrote documentation for handling and setup of code repositories and local development environments for internal development team'
+        ]
+    },
+    {
+        employer: 'Hill+Knowlton Strategies',
+        jobTitle: 'Senior Interactive Developer',
+        jobLocation: 'Austin, TX',
+        jobDates: 'March 2012 to November 2013',
+        jobDescription: [
+            'Developed sites from Photoshop comps into WordPress and Drupal: DeliveringforAmerica.com, LuminantCareers.com, CurbcutPartners.com, IL-FA.com and biotechnology.amgen.com',
+            'Programmed HTML emails from Photoshop comps and worked with the stakeholders to manage their distribution',
+            'Created departmental communication standards and documentation procedures'
+        ]
+    },
+    {
+        employer: 'Enviromedia Social Marketing',
+        jobTitle: 'Interactive Developer',
+        jobLocation: 'Austin, TX',
+        jobDates: 'December 2009 to March 2012 (one year as a freelancer)',
+        jobDescription: [
+            'Designed and implemented PHP/MySQL application: DontMessWithTexas.org Scholarship contest',
+            'Developed WordPress sites from Photoshop comps: LoveKidneys.com, SaveKidneys.com, KnowMyStatus.org, Protect2.org, agency site, BestTeachinTexas.org',
+            'Performed stakeholder interviews, created information architecture, wrote database and programmed internal HR review system in PHP/MySQL/HTML and CSS'
+        ]
+    }
+];
+
+
+var Job = function (data) {
+    this.employer = ko.observable(data.employer);
+    this.jobTitle = ko.observable(data.jobTitle);
+    this.jobLocation = ko.observable(data.jobLocation);
+    this.jobDates = ko.observable(data.jobDates);
+    this.jobDescription = ko.observableArray(data.jobDescription);
+};
+
 // Education data
 var education = [
     {
@@ -43,69 +128,7 @@ var education = [
     }
 ];
 
-// Work data
-var work = [
-    {
-        jobs : [
-            {
-                employer: 'Charles Schwab Platform Production',
-                jobTitle: 'Producer (contract)',
-                jobLocation: 'Austin, TX',
-                jobDates: 'July 2016 to July 2017',
-                jobDescription: [
-                    'Managed a substantial queue of varied web-based projects',
-                    'Published diverse content to the several proprietary content management systems',
-                    'Ensured high quality standards in a team environment'
-                ]
-            },
-            {
-                employer: 'Wunderman Production',
-                jobTitle: 'Interactive Developer (short-term contract)',
-                jobLocation: 'Austin, TX',
-                jobDates: 'March 2016 to June 2016',
-                jobDescription: [
-                    'Created HTML/CSS from Photoshop layouts for proprietary email automation',
-                    'Tested and verified code in Litmus suite',
-                    'Constructed and maintained an Excel-based tracking system of client feedback for the team'
-                ]
 
-            },
-            {
-                employer: 'Y&R Austin',
-                jobTitle: 'Senior Interactive Developer',
-                jobLocation: 'Austin, TX',
-                jobDates: 'November 2013 to March 2016',
-                jobDescription: [
-                    'Programmed sites from Photoshop comps into WordPress: Agency website (yr-austin.com), Dell500 contest site (award-winning), Wildlife Rescue and Rehabilitation (wildlife-rescue.org)',
-                    'Produced web-based emails from Photoshop comps and loaded into proprietary Dell email system for end users',
-                    'Created departmental standards and wrote documentation for handling and setup of code repositories and local development environments for internal development team'
-                ]
-            },
-            {
-                employer: 'Hill+Knowlton Strategies',
-                jobTitle: 'Senior Interactive Developer',
-                jobLocation: 'Austin, TX',
-                jobDates: 'March 2012 to November 2013',
-                jobDescription: [
-                    'Developed sites from Photoshop comps into WordPress and Drupal: DeliveringforAmerica.com, LuminantCareers.com, CurbcutPartners.com, IL-FA.com and biotechnology.amgen.com',
-                    'Programmed HTML emails from Photoshop comps and worked with the stakeholders to manage their distribution',
-                    'Created departmental communication standards and documentation procedures'
-                ]
-            },
-            {
-                employer: 'Enviromedia Social Marketing',
-                jobTitle: 'Interactive Developer',
-                jobLocation: 'Austin, TX',
-                jobDates: 'December 2009 to March 2012 (one year as a freelancer)',
-                jobDescription: [
-                    'Designed and implemented PHP/MySQL application: DontMessWithTexas.org Scholarship contest',
-                    'Developed WordPress sites from Photoshop comps: LoveKidneys.com, SaveKidneys.com, KnowMyStatus.org, Protect2.org, agency site, BestTeachinTexas.org',
-                    'Performed stakeholder interviews, created information architecture, wrote database and programmed internal HR review system in PHP/MySQL/HTML and CSS'
-                ]
-            }
-        ]
-    }
-];
 
 // Projects data
 var projects = [
@@ -174,10 +197,11 @@ var projects = [
 ];
 
 
-var BioViewModel = function() {
+var ViewModel = function() {
     // self will always map to the VM
     var self = this;
 
+    // BIO SECTION
     self.bioName = ko.observable('Lisa Cowan');
     self.bioRole = ko.observable('Front End Developer');
     self.mobile = ko.observable('512.468.4200');
@@ -188,7 +212,17 @@ var BioViewModel = function() {
     self.biopic = ko.observable('images/headshot_cowan.jpg');
     self.bioSkills = ko.observable('HTML5, CSS3, PHP, MySQL, JavaScript, jQuery, Responsive development, WordPress, Drupal 7 & 8, Joomla!, Bootstrap, 960 grid, Sublime Text, GitHub, Photoshop, Illustrator, Project management & organization, Requirements gathering, Information architecture');
 
+    // WORK SECTION
+    self.jobList = ko.observableArray([]);
+
+    // Adding the cat data into the cat array
+    jobs.forEach(function(job){
+        self.jobList.push( new Job(job) );
+    });
+
+        console.log(self.jobList());
+
 };
 
 
-ko.applyBindings(BioViewModel);
+ko.applyBindings(ViewModel);

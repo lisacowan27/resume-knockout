@@ -49,6 +49,11 @@
       <article>
         <div id="workExperience" class="gray center-content">
           <h2 class="h2">Work Experience</h2>
+          <div class="row" data-bind="foreach: jobList">
+            <div class="col-sm-12 col-md-12 col-lg-12">
+              <h4 class="h4" data-bind="text: employer"></h4>
+            </div>
+          </div>
         </div>
       </article>
       <article>
