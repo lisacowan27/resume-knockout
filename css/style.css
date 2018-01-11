@@ -134,7 +134,7 @@ h4 {
 h2,
 h3,
 h5 {
-  padding: 10px 5%;
+  padding: 10px 0;
 }
 
 /* ------------------------------------------
@@ -150,6 +150,7 @@ Sections -- header
   font-size: 1em;
   color: #666;
   line-height: 22px;
+  padding-top: 1em;
 }
 
 .flex-box {
@@ -194,7 +195,7 @@ Sections -- header
 
 .biopic {
   float: left;
-  padding: 0.2em 2% 0 2%;
+  padding: 1em 2% 0 2%;
   width: 200px;
 }
 

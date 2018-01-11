@@ -3,32 +3,6 @@
 // Global variables
 var ko;
 
-// Bio data
-var bio = [
-    {
-    skills: [
-        'HTML5',
-        'CSS3',
-        'PHP',
-        'MySQL',
-        'JavaScript',
-        'jQuery',
-        'Responsive development',
-        'WordPress',
-        'Drupal 7 & 8',
-        'Joomla!',
-        'Bootstrap',
-        '960 grid',
-        'Sublime Text',
-        'GitHub',
-        'Photoshop, Illustrator',
-        'Project management & organization',
-        'Requirements gathering',
-        'Information architecture'
-        ]
-    }
-];
-
 // Education data
 var education = [
     {
@@ -210,9 +184,9 @@ var BioViewModel = function() {
     self.email = ko.observable('cowan_lisa@att.net');
     self.github = ko.observable('lisacowan27');
     self.bioLocation = ko.observable('Austin, TX');
-    self.welcomeMessage = ko.observable('I am a seasoned Front End Developer who can use web ' +  'technologies from HTML tables with font tags to the latest Chrome optimization tools. ' + 'I approach every project as a challenge and an opportunity to achieve flawless collaboration ' + 'with my team members. Whether slicing up a Photoshop design for pixel-perfect HTML/CSS ' + 'layout or constructing a site in the right CMS for the job, I create code that is responsive, clean '+ 'and optimized.');
+    self.bioWelcomeMessage = ko.observable('I am a seasoned Front End Developer who can use web ' +  'technologies from HTML tables with font tags to the latest Chrome optimization tools. ' + 'I approach every project as a challenge and an opportunity to achieve flawless collaboration ' + 'with my team members. Whether slicing up a Photoshop design for pixel-perfect HTML/CSS ' + 'layout or constructing a site in the right CMS for the job, I create code that is responsive, clean '+ 'and optimized.');
     self.biopic = ko.observable('images/headshot_cowan.jpg');
-
+    self.bioSkills = ko.observable('HTML5, CSS3, PHP, MySQL, JavaScript, jQuery, Responsive development, WordPress, Drupal 7 & 8, Joomla!, Bootstrap, 960 grid, Sublime Text, GitHub, Photoshop, Illustrator, Project management & organization, Requirements gathering, Information architecture');
 
 };
 
