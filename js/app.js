@@ -4,22 +4,6 @@
 var ko;
 
 // Work data
-
-/*
-var places = [
-  {
-    title: 'Baraga State Park',
-    LatLng: {
-      lat: 46.749297,
-      lng: -88.476654
-    },
-    selected: false,
-    image: 'BaragaStatePark.png',
-    imageInfo: 'Bishop Baraga Shrine'
-  },
-*/
-
-
 var jobs = [
     {
         employer: 'Charles Schwab Platform Production',
@@ -27,9 +11,7 @@ var jobs = [
         jobLocation: 'Austin, TX',
         jobDates: 'July 2016 to July 2017',
         jobDescription: [
-            'Managed a substantial queue of varied web-based projects',
-            'Published diverse content to the several proprietary content management systems',
-            'Ensured high quality standards in a team environment'
+            'Managed a substantial queue of varied web-based projects', 'Published diverse content to the several proprietary content management systems', 'Ensured high quality standards in a team environment'
         ]
     },
     {
@@ -42,7 +24,6 @@ var jobs = [
             'Tested and verified code in Litmus suite',
             'Constructed and maintained an Excel-based tracking system of client feedback for the team'
         ]
-
     },
     {
         employer: 'Y&R Austin',
@@ -79,14 +60,17 @@ var jobs = [
     }
 ];
 
-
 var Job = function (data) {
-    this.employer = ko.observable(data.employer);
-    this.jobTitle = ko.observable(data.jobTitle);
-    this.jobLocation = ko.observable(data.jobLocation);
-    this.jobDates = ko.observable(data.jobDates);
-    this.jobDescription = ko.observableArray(data.jobDescription);
-};
+
+        //jobs = ko.mapping.fromJS(jobs);
+
+        this.employer = ko.observable(data.employer);
+        this.jobTitle = ko.observable(data.jobTitle);
+        this.jobLocation = ko.observable(data.jobLocation);
+        this.jobDates = ko.observable(data.jobDates);
+        this.jobDescription = ko.observableArray(data.jobDescription);
+
+        };
 
 // Education data
 var education = [
@@ -197,7 +181,7 @@ var projects = [
 ];
 
 
-var ViewModel = function() {
+var ViewModel = function(data) {
     // self will always map to the VM
     var self = this;
 
@@ -213,14 +197,17 @@ var ViewModel = function() {
     self.bioSkills = ko.observable('HTML5, CSS3, PHP, MySQL, JavaScript, jQuery, Responsive development, WordPress, Drupal 7 & 8, Joomla!, Bootstrap, 960 grid, Sublime Text, GitHub, Photoshop, Illustrator, Project management & organization, Requirements gathering, Information architecture');
 
     // WORK SECTION
-    self.jobList = ko.observableArray([]);
 
-    // Adding the cat data into the cat array
-    jobs.forEach(function(job){
-        self.jobList.push( new Job(job) );
-    });
 
-        console.log(self.jobList());
+        this.jobList = ko.observableArray([]);
+
+        jobs.forEach(function(job){
+            self.jobList.push( new Job(job) );
+        });
+
+
+       console.log('joblist ' + jobList());
+
 
 };
 
