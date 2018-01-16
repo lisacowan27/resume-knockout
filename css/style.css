@@ -113,15 +113,15 @@ Headers
 }
 
 .h2 {
-  font-weight: 400;
+  font-weight: 300;
   font-size: 24px;
-  color: #333;
+  color: #1199c3;
   line-height: 29px;
   padding: 0 10px 0 0;
   margin-top: .5em;
 }
 
-h3 {
+.h3 {
   color: #00b96f;
   margin-top: 0.5em;
   font-weight: 300;
@@ -166,19 +166,13 @@ Sections -- header
   padding: 0 10px;
 }
 
-.skills-h3 {
-  font-size: 1.2em;
-  color: #00b96f;
-}
-
 .skills {
   padding: 0;
 }
 
 .h3-skills {
-  color: #333;
+  color: #00b96f;
   font-size: 20px;
-  color: #333;
   line-height: 22px;
   margin-top: 0.5em;
 }
@@ -204,22 +198,12 @@ Sections -- header
 Sections -- work experience
 --------------------------------------------- */
 
-.work-entry .flex-item {
-  list-style-type: none;
+.work .h4 {
+  margin-bottom: 5px;
 }
 
-.work-entry .date-text {
-  display: block;
-  float: none;
-}
-
-.work-entry ul {
-  list-style: disc;
-  padding-left: 10px;
-}
-
-.work-entry ul li {
-  margin-left: 10px;
+.work ul {
+  margin-bottom: 10px;
 }
 
 /* ------------------------------------------
@@ -268,20 +252,16 @@ Sections -- education
 }
 
 /* ------------------------------------------
-Sections -- map
+Sections -- lists
 --------------------------------------------- */
 
-#map {
-  display: block;
-  height: 100%;
-  margin: 0 5%;
+.work li {
+  list-style: disc;
+  list-style-position: outside;
+  margin-left: 20px;
 }
 
-#mapDiv {
-  height: 400px;
-  width: 100%;
-  padding-bottom: 5%;
-}
+
 
 /* ------------------------------------------
 Sections -- let's connect
