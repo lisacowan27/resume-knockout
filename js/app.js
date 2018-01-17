@@ -62,15 +62,84 @@ var jobs = [
 
 var Job = function (data) {
 
-        //jobs = ko.mapping.fromJS(jobs);
-
         this.employer = ko.observable(data.employer);
         this.jobTitle = ko.observable(data.jobTitle);
         this.jobLocation = ko.observable(data.jobLocation);
         this.jobDates = ko.observable(data.jobDates);
         this.jobDescription = ko.observableArray(data.jobDescription);
+    };
 
-        };
+// Projects data
+var projects = [
+    {
+        projectTitle: 'Udacity Arcade Game',
+        projectURL: 'https://github.com/lisacowan27/frontend-nanodegree-arcade-game',
+        projectDescription: ['Developed arcade game using JavaScript and HTML5 canvas to create collision and capture capabilities'],
+        projectImages: 'images/arcade-game.png'
+    },
+    {
+        projectTitle: 'Y&R Austin website',
+        projectURL: 'http://yr-austin.com',
+        projectDescription: ['Reskinned agency site in collaboration with agency designer from Photoshop comps',
+                    'Updated and hardened the WordPress build to improve site security'],
+        projectImages: 'images/yr-site.png'
+    },
+    {
+        projectTitle: 'Take Flight from Windows&reg; XP',
+        projectURL: 'http://yr-austin.com/showcase/dell/sites/xp/ ',
+        projectDescription: ['Programmed an interactive infographic to encourage XP users to upgrade their OS',
+                    'Used JavaScript and jQuery library called Superscrollarama to create the infographic from Photoshop mockups',
+                    'Received W<sup>3</sup> Gold in 2014 and 2015 AVA Digital awards'],
+        projectImages: 'images/yr-dell.png'
+    },
+    {
+        projectTitle: 'Wildlife Rescue and Rehabilitation interactive map',
+        projectURL: 'Spring 2015',
+        projectDescription: ['Developed a virtual tour of a local wildlife rescue organization for potential patrons to see how their donations could concretely benefit the organization',
+                    'Programmed a second WordPress theme to implement the map into an existing site based on Illustrator comps'],
+        projectImages: 'images/wildlife-rescue.png'
+    },
+    {
+        projectTitle: 'Luminant Careers website',
+        projectURL: 'http://www.luminantcareers.com/',
+        projectDescription: ['Programmed WordPress site using the Thesis framework from Photoshop designs'],
+        projectImages: 'images/luminant.png'
+    },
+    {
+        projectTitle: 'Curbcut Urban Partners website',
+        projectURL: 'http://curbcutpartners.com/',
+        projectDescription: ['Programmed WordPress site using the Thesis framework from Photoshop designs'],
+        projectImages: 'images/curbcut.png'
+    },
+    {
+        projectTitle: 'Amgen Biotechnology website',
+        projectURL: 'http://biotechnology.amgen.com/',
+        projectDescription: ['Programmed Drupal site from Photoshop designs'],
+        projectImages: 'images/amgen-biotech.png'
+    },
+    {
+        projectTitle: 'Illinois Finance Authority website',
+        projectURL: 'http://il-fa.com/',
+        projectDescription: ['Re-developed Drupal site from Photoshop designs'],
+        projectImages: 'images/ilfa.png'
+    },
+    {
+        projectTitle: 'Know My Status website',
+        projectURL: 'http://www.knowmystatus.org/',
+        projectDescription: ['Programed website from Photoshop designs'],
+        projectImages: 'images/know-status.png'
+    }
+];
+
+var Project = function (data) {
+
+        this.projectTitle = ko.observable(data.projectTitle);
+        this.projectURL = ko.observable(data.projectURL);
+        this.projectDescription = ko.observableArray(data.projectDescription);
+        this.projectImages = ko.observable(data.projectImages);
+};
+
+
 
 // Education data
 var education = [
@@ -113,74 +182,6 @@ var education = [
 ];
 
 
-
-// Projects data
-var projects = [
-    {
-        projects: [
-            {
-                projectTitle: 'Udacity Arcade Game',
-                projectURL: 'https://github.com/lisacowan27/frontend-nanodegree-arcade-game',
-                projectDescription: ['Developed arcade game using JavaScript and HTML5 canvas to create collision and capture capabilities'],
-                images: ['images/arcade-game.png']
-            },
-            {
-                projectTitle: 'Y&R Austin website',
-                projectURL: 'http://yr-austin.com',
-                projectDescription: ['Reskinned agency site in collaboration with agency designer from Photoshop comps',
-                    'Updated and hardened the WordPress build to improve site security'],
-                images: ['images/yr-site.png']
-            },
-            {
-                projectTitle: 'Take Flight from Windows&reg; XP',
-                projectURL: 'http://yr-austin.com/showcase/dell/sites/xp/ ',
-                projectDescription: ['Programmed an interactive infographic to encourage XP users to upgrade their OS',
-                    'Used JavaScript and jQuery library called Superscrollarama to create the infographic from Photoshop mockups',
-                    'Received W<sup>3</sup> Gold in 2014 and 2015 AVA Digital awards'],
-                images: ['images/yr-dell.png']
-            },
-            {
-                projectTitle: 'Wildlife Rescue and Rehabilitation interactive map',
-                projectURL: 'Spring 2015',
-                projectDescription: ['Developed a virtual tour of a local wildlife rescue organization for potential patrons to see how their donations could concretely benefit the organization',
-                    'Programmed a second WordPress theme to implement the map into an existing site based on Illustrator comps'],
-                images: ['images/wildlife-rescue.png']
-            },
-            {
-                projectTitle: 'Luminant Careers website',
-                projectURL: 'http://www.luminantcareers.com/',
-                projectDescription: ['Programmed WordPress site using the Thesis framework from Photoshop designs'],
-                images: ['images/luminant.png']
-            },
-            {
-                projectTitle: 'Curbcut Urban Partners website',
-                projectURL: 'http://curbcutpartners.com/',
-                projectDescription: ['Programmed WordPress site using the Thesis framework from Photoshop designs'],
-                images: ['images/curbcut.png']
-            },
-            {
-                projectTitle: 'Amgen Biotechnology website',
-                projectURL: 'http://biotechnology.amgen.com/',
-                projectDescription: ['Programmed Drupal site from Photoshop designs'],
-                images: ['images/amgen-biotech.png']
-            },
-            {
-                projectTitle: 'Illinois Finance Authority website',
-                projectURL: 'http://il-fa.com/',
-                projectDescription: ['Re-developed Drupal site from Photoshop designs'],
-                images: ['images/ilfa.png']
-            },
-            {
-                projectTitle: 'Know My Status website',
-                projectURL: 'http://www.knowmystatus.org/',
-                projectDescription: ['Programed website from Photoshop designs'],
-                images: ['images/know-status.png']
-            }
-        ]
-    }
-];
-
-
 var ViewModel = function(data) {
     // self will always map to the VM
     var self = this;
@@ -198,16 +199,22 @@ var ViewModel = function(data) {
 
     // WORK SECTION
 
-
         this.jobList = ko.observableArray([]);
 
         jobs.forEach(function(job){
             self.jobList.push( new Job(job) );
         });
 
-
        console.log('joblist ' + jobList());
 
+   // PROJECT SECTION
+
+        this.projectsList = ko.observableArray([]);
+
+        projects.forEach(function(project){
+            self.projectsList.push( new Project(project));
+        });
+        console.log('projectsList ' + projectsList());
 
 };
 
