@@ -60,6 +60,8 @@ var jobs = [
     }
 ];
 
+
+// Initialize job data
 var Job = function (data) {
 
         this.employer = ko.observable(data.employer);
@@ -72,13 +74,22 @@ var Job = function (data) {
 // Projects data
 var projects = [
     {
+        projectTitle: 'Udacity Neighborhood Map',
+        projectDate: 'December 2017',
+        projectURL: 'https://github.com/lisacowan27/neighborhood-map',
+        projectDescription: ['Developed single page map application using Google Maps API, WikiMedia API, Knockout.js, and Bootstrap, Functionality includes Knockout filter, links to WikiMedia and original photography'],
+        projectImages: 'images/arcade-game.png'
+    },
+    {
         projectTitle: 'Udacity Arcade Game',
+        projectDate: 'October 2017',
         projectURL: 'https://github.com/lisacowan27/frontend-nanodegree-arcade-game',
         projectDescription: ['Developed arcade game using JavaScript and HTML5 canvas to create collision and capture capabilities'],
         projectImages: 'images/arcade-game.png'
     },
     {
         projectTitle: 'Y&R Austin website',
+        projectDate: 'Fall 2015',
         projectURL: 'http://yr-austin.com',
         projectDescription: ['Reskinned agency site in collaboration with agency designer from Photoshop comps',
                     'Updated and hardened the WordPress build to improve site security'],
@@ -86,6 +97,7 @@ var projects = [
     },
     {
         projectTitle: 'Take Flight from Windows&reg; XP',
+        projectDate: 'Spring 2014',
         projectURL: 'http://yr-austin.com/showcase/dell/sites/xp/ ',
         projectDescription: ['Programmed an interactive infographic to encourage XP users to upgrade their OS',
                     'Used JavaScript and jQuery library called Superscrollarama to create the infographic from Photoshop mockups',
@@ -94,43 +106,50 @@ var projects = [
     },
     {
         projectTitle: 'Wildlife Rescue and Rehabilitation interactive map',
-        projectURL: 'Spring 2015',
+        projectDate: 'Spring 2015',
+        projectURL: 'http://wildlife-rescue.org/about/facilities/interactive-map/',
         projectDescription: ['Developed a virtual tour of a local wildlife rescue organization for potential patrons to see how their donations could concretely benefit the organization',
                     'Programmed a second WordPress theme to implement the map into an existing site based on Illustrator comps'],
         projectImages: 'images/wildlife-rescue.png'
     },
     {
         projectTitle: 'Luminant Careers website',
+        projectDate: 'Fall 2013',
         projectURL: 'http://www.luminantcareers.com/',
         projectDescription: ['Programmed WordPress site using the Thesis framework from Photoshop designs'],
         projectImages: 'images/luminant.png'
     },
     {
         projectTitle: 'Curbcut Urban Partners website',
+        projectDate: 'Fall 2013',
         projectURL: 'http://curbcutpartners.com/',
         projectDescription: ['Programmed WordPress site using the Thesis framework from Photoshop designs'],
         projectImages: 'images/curbcut.png'
     },
     {
         projectTitle: 'Amgen Biotechnology website',
+        projectDate: 'Fall 2013',
         projectURL: 'http://biotechnology.amgen.com/',
         projectDescription: ['Programmed Drupal site from Photoshop designs'],
         projectImages: 'images/amgen-biotech.png'
     },
     {
         projectTitle: 'Illinois Finance Authority website',
+        projectDate: 'Fall 2013',
         projectURL: 'http://il-fa.com/',
         projectDescription: ['Re-developed Drupal site from Photoshop designs'],
         projectImages: 'images/ilfa.png'
     },
     {
         projectTitle: 'Know My Status website',
+        projectDate: 'Spring 2012',
         projectURL: 'http://www.knowmystatus.org/',
         projectDescription: ['Programed website from Photoshop designs'],
         projectImages: 'images/know-status.png'
     }
 ];
 
+// Initialize project data
 var Project = function (data) {
 
         this.projectTitle = ko.observable(data.projectTitle);
@@ -197,8 +216,10 @@ var ViewModel = function(data) {
     self.biopic = ko.observable('images/headshot_cowan.jpg');
     self.bioSkills = ko.observable('HTML5, CSS3, PHP, MySQL, JavaScript, jQuery, Responsive development, WordPress, Drupal 7 & 8, Joomla!, Bootstrap, 960 grid, Sublime Text, GitHub, Photoshop, Illustrator, Project management & organization, Requirements gathering, Information architecture');
 
+
     // WORK SECTION
 
+        // Create jobList Array for binding
         this.jobList = ko.observableArray([]);
 
         jobs.forEach(function(job){
@@ -209,6 +230,7 @@ var ViewModel = function(data) {
 
    // PROJECT SECTION
 
+        // Create projectList Array for binding
         this.projectsList = ko.observableArray([]);
 
         projects.forEach(function(project){
