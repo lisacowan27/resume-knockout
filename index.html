@@ -77,7 +77,34 @@
       </article>
       <article>
         <div id="projects" class="projects center-content">
-          <h2 class="h2">Projects</h2>
+
+              <h2 class="h2">Projects</h2>
+          <!-- ko foreach: projectsList -->
+          <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12">
+                <a data-bind="attr: { href: projectURL}"><h4 class="h4" data-bind="text: projectTitle"></h4></a>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12">
+              <p class="date-text" data-bind="text: projectDate"></p>
+            </div>
+          </div>
+          <div class="row">
+              <div class="col-sm-12 col-md-12 col-lg-12">
+                <ul>
+                <!-- ko foreach: projectDescription -->
+                  <li data-bind="text: $data"></li>
+                  <!-- /ko -->
+                </ul>
+              </div>
+            </div>
+          <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12">
+              <img src="" alt="" data-bind="attr: {src: projectImages}">
+            </div>
+          </div>
+          <!-- /ko -->
         </div>
       </article>
       <article>

@@ -153,6 +153,7 @@ var projects = [
 var Project = function (data) {
 
         this.projectTitle = ko.observable(data.projectTitle);
+        this.projectDate = ko.observable(data.projectDate);
         this.projectURL = ko.observable(data.projectURL);
         this.projectDescription = ko.observableArray(data.projectDescription);
         this.projectImages = ko.observable(data.projectImages);
