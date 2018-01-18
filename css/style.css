@@ -2,31 +2,13 @@
 General
 --------------------------------------------- */
 
-
-body,
-div,
-ul,
-li,
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  padding: 0;
-  margin: 0;
-}
-
-.clear-fix {
-  overflow: auto;
-}
-
 body {
   background: #f2f2f2;
-  font: normal 300 16px/20px 'Nunito Sans', sans-serif;
 }
 
+body, p, li {
+  font: normal 300 16px/24px 'Nunito Sans', sans-serif;
+}
 
 .work-entry {
   padding: 0 5%;
@@ -61,9 +43,16 @@ p {
   color: #333;
 }
 
-a {
+a,
+a .h4 {
   color: #00b96f;
-  text-decoration: dotted;
+  margin-top: 10px;
+  display: block;
+}
+
+a:hover,
+a .h4:hover {
+  color: #00b96f;
   margin-top: 10px;
   display: block;
 }
@@ -71,6 +60,7 @@ a {
 ul {
   list-style-type: none;
 }
+
 
 .dark-text {
   color: #1e5aa9;
@@ -127,15 +117,10 @@ Headers
   font-weight: 300;
 }
 
-h4 {
+.h4 {
   font-weight: 300;
-  color: #009caa;
-}
-
-h2,
-h3,
-h5 {
-  padding: 10px 0;
+  color: #333;
+  margin-bottom: 5px;
 }
 
 /* ------------------------------------------
@@ -148,9 +133,7 @@ Sections -- header
 }
 
 .welcome-message {
-  font-size: 1em;
   color: #666;
-  line-height: 22px;
   padding-top: 1em;
 }
 
@@ -198,10 +181,6 @@ Sections -- header
 Sections -- work experience
 --------------------------------------------- */
 
-.work .h4 {
-  margin-bottom: 5px;
-}
-
 .work ul {
   margin-bottom: 10px;
 }
@@ -210,23 +189,10 @@ Sections -- work experience
 Sections -- projects
 --------------------------------------------- */
 
-.project-content {
-  margin-bottom: 1em;
-}
-
-.project-entry ul {
-    list-style: disc;
-    padding-left: 10px;
-    margin-bottom: 1em;
-}
-
-.project-entry li {
-  margin-left: 10px;
-}
-
-.project-entry img {
+.project-image {
   width: 600px;
   height: auto;
+  margin-bottom: 2em;
 }
 
 
@@ -255,11 +221,13 @@ Sections -- education
 Sections -- lists
 --------------------------------------------- */
 
-.work li {
+.work li,
+.projects li {
   list-style: disc;
   list-style-position: outside;
-  margin-left: 20px;
 }
+
+.
 
 
 
