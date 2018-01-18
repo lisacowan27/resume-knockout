@@ -77,8 +77,8 @@ var projects = [
         projectTitle: 'Udacity Neighborhood Map',
         projectDate: 'December 2017',
         projectURL: 'https://github.com/lisacowan27/neighborhood-map',
-        projectDescription: ['Developed single page map application using Google Maps API, WikiMedia API, Knockout.js, and Bootstrap, Functionality includes Knockout filter, links to WikiMedia and original photography'],
-        projectImages: 'images/arcade-game.png'
+        projectDescription: ['Developed single page map application using Google Maps API, WikiMedia API, Knockout.js, and Bootstrap', 'Functionality includes Knockout filter, links to WikiMedia and original photography'],
+        projectImages: 'images/neighborhood-map.png'
     },
     {
         projectTitle: 'Udacity Arcade Game',
