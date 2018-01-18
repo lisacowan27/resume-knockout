@@ -160,46 +160,57 @@ var Project = function (data) {
 };
 
 
-
 // Education data
-var education = [
+var schools = [
     {
-        schools: [
-            {
-                schoolName: 'The University of Houston',
-                schoolLocation: 'Houston, TX',
-                degree: 'finished @ UT',
-                majors: ['Music'],
-                schoolDates: '1983-1985',
-                schoolURL: 'http://www.uh.edu/'
-            },
-            {
-                schoolName: 'The University of Texas at Austin',
-                schoolLocation: 'Austin, TX',
-                degree: 'Bachelor\'s',
-                majors: ['Psychology'],
-                schoolDates: '1990-1993',
-                schoolURL: 'https://www.utexas.edu/'
-            },
-            {
-                schoolName: 'The University of Texas at Austin',
-                schoolLocation: 'Austin, TX',
-                degree: 'Master\'s',
-                majors: ['Library and Information Science'],
-                schoolDates: '1993 to 1995',
-                schoolURL: 'https://www.utexas.edu/'
-            }
-        ],
-        onlineCourses: [
-            {
-                onlineCoursetitle: 'Front End Web Development',
-                onlineCourseName: 'Udacity',
-                onlineCourseDates: 'current',
-                onlineCourseURL: 'https://www.udacity.com/'
-            }
-        ]
+        schoolName: 'The University of Houston',
+        schoolLocation: 'Houston, TX',
+        degree: 'finished @ UT',
+        majors: ['Music'],
+        schoolDates: '1983-1985',
+        schoolURL: 'http://www.uh.edu/'
+    },
+    {
+        schoolName: 'The University of Texas at Austin',
+        schoolLocation: 'Austin, TX',
+        degree: 'Bachelor\'s',
+        majors: ['Psychology'],
+        schoolDates: '1990-1993',
+        schoolURL: 'https://www.utexas.edu/'
+    },
+    {
+        schoolName: 'The University of Texas at Austin',
+        schoolLocation: 'Austin, TX',
+        degree: 'Master\'s',
+        majors: ['Library and Information Science'],
+        schoolDates: '1993 to 1995',
+        schoolURL: 'https://www.utexas.edu/'
     }
 ];
+
+var onlineCourses = [
+    {
+        onlineCoursetitle: 'Front End Web Development',
+        onlineCourseName: 'Udacity',
+        onlineCourseDates: 'current',
+        onlineCourseURL: 'https://www.udacity.com/'
+    }
+];
+
+// Initialize projects data
+var Education = function (data) {
+
+        this.schoolName = ko.observable(data.schoolName);
+        this.schoolLocation = ko.observable(data.schoolLocation);
+        this.degree = ko.observable(data.degree);
+        this.majors = ko.observable(data.majors);
+        this.schoolDates = ko.observable(data.schoolDates);
+        this.schoolURL = ko.observable(data.schoolURL);
+        this.onlineCoursetitle = ko.observable(data.onlineCoursetitle);
+        this.onlineCourseName = ko.observable(data.onlineCourseName);
+        this.onlineCourseDates = ko.observable(data.onlineCourseDates);
+        this.onlineCourseURL = ko.observable(data.onlineCourseURL);
+};
 
 
 var ViewModel = function(data) {
@@ -220,24 +231,40 @@ var ViewModel = function(data) {
 
     // WORK SECTION
 
-        // Create jobList Array for binding
-        this.jobList = ko.observableArray([]);
+    // Create jobList Array for binding
+    this.jobList = ko.observableArray([]);
 
-        jobs.forEach(function(job){
-            self.jobList.push( new Job(job) );
-        });
+    jobs.forEach(function(job){
+        self.jobList.push( new Job(job) );
+    });
 
-       console.log('joblist ' + jobList());
+    console.log('joblist ' + jobList());
 
    // PROJECT SECTION
 
-        // Create projectList Array for binding
-        this.projectsList = ko.observableArray([]);
+    // Create projectList Array for binding
+    this.projectsList = ko.observableArray([]);
 
-        projects.forEach(function(project){
-            self.projectsList.push( new Project(project));
-        });
-        console.log('projectsList ' + projectsList());
+    projects.forEach(function(project){
+        self.projectsList.push( new Project(project));
+    });
+    console.log('projectsList ' + projectsList());
+
+    // EDUCATION SECTION
+
+    this.educationList = ko.observableArray([]);
+
+    schools.forEach(function(school){
+        self.educationList.push( new Education(school));
+    });
+
+    console.log('educationList ' + educationList());
+
+    onlineCourses.forEach(function(onlineCourse){
+        self.educationList.push( new Education(onlineCourse));
+    });
+
+    console.log('educationList ' + educationList());
 
 };
 
