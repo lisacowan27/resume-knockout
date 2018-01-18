@@ -47,7 +47,7 @@
     </header>
     <main>
       <article>
-        <div id="workExperience" class="work gray center-content">
+        <div class="work gray center-content">
           <h2 class="h2">Work Experience</h2>
           <!-- ko foreach: jobList -->
             <div class="row">
@@ -76,7 +76,7 @@
         </div>
       </article>
       <article>
-        <div id="projects" class="projects center-content">
+        <div class="projects center-content">
               <h2 class="h2">Projects</h2>
           <!-- ko foreach: projectsList -->
           <div class="row">
@@ -107,8 +107,34 @@
         </div>
       </article>
       <article>
-        <div id="education" class="education gray center-content">
+        <div class="education gray center-content">
           <h2 class="h2">Education</h2>
+          <!-- ko foreach: educationList -->
+            <div class="row">
+              <div class="col-sm-12 col-md-12 col-lg-12">
+                  <a data-bind="attr: { href: schoolURL}"><h4 class="h4" data-bind="text: schoolName"></h4></a>
+              </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-8 col-md-8 col-lg-8">
+              <p class="date-text" data-bind="text: schoolDates"></p>
+            </div>
+            <div class="col-sm-4 col-md-4 col-lg-4 text-right">
+              <p data-bind="text: schoolLocation"></p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12">
+              <p data-bind="text: degree"></p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12">
+              <p data-bind="text: majors"></p>
+            </div>
+          </div>
+
+          <!-- /ko -->
         </div>
       </article>
     </main>
