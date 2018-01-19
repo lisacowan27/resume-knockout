@@ -96,12 +96,12 @@ var projects = [
         projectImages: 'images/yr-site.png'
     },
     {
-        projectTitle: 'Take Flight from Windows&reg; XP',
+        projectTitle: 'Take Flight from Windows; XP',
         projectDate: 'Spring 2014',
         projectURL: 'http://yr-austin.com/showcase/dell/sites/xp/ ',
         projectDescription: ['Programmed an interactive infographic to encourage XP users to upgrade their OS',
                     'Used JavaScript and jQuery library called Superscrollarama to create the infographic from Photoshop mockups',
-                    'Received W<sup>3</sup> Gold in 2014 and 2015 AVA Digital awards'],
+                    'Received W3 Gold in 2014 and 2015 AVA Digital awards'],
         projectImages: 'images/yr-dell.png'
     },
     {
