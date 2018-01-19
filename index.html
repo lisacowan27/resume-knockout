@@ -1,200 +1,218 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <meta charset="utf-8">
+    <meta charset="utf-8">
 
-  <title>Lisa's Resume</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/style.css">
-  <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600|Indie+Flower" rel="stylesheet">
+    <title>Lisa's Resume</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600|Indie+Flower" rel="stylesheet">
 </head>
-<body>
-  <div id="container">
-    <header>
-      <!-- ko foreach: bioList -->
-      <div id="header" class="header center-content clear-fix">
-        <div class="row">
-          <div class="col-sm-12 col-md-12 col-lg-12">
-            <h1 class="h1" data-bind="text: bioName"></h1><span class="role" data-bind="text: bioRole"></span>
-            <hr>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-sm-12 col-md-12 col-lg-12 flex-box">
-            <ul id="topContacts" class="flex-box">
-              <li class="flex-item"><span class="dark-text">mobile</span><span class="gray-text" data-bind="text: bioMobile"></span></li>
-              <li class="flex-item"><span class="dark-text">email</span><span class="gray-text" data-bind="text: bioEmail"></span></li>
-              <li class="flex-item"><span class="dark-text">github</span><span class="gray-text" data-bind="text: bioGithub"></span></li>
-              <li class="flex-item"><span class="dark-text">location</span><span class="gray-text" data-bind="text: bioLocation"></span></li>
-            </ul>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-sm-4 col-md-4 col-lg-4">
-            <img class="biopic" src="" alt="Lisa Cowan" data-bind="attr: {src: biopic}">
-          </div>
-          <div class="col-sm-8 col-md-8 col-lg-8">
-            <p class="welcome-message" data-bind="text: bioWelcomeMessage"></p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-sm-12 col-md-12 col-lg-12">
-            <hr>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-sm-12 col-md-12 col-lg-12">
-            <h3 id="skills-h3" class="h3">Skills at a Glance:</h3>
-              <ul class="flex-column">
-                <!-- ko foreach: bioSkills -->
-                  <li class="flex-item" data-bind="text: $data"></li>
-                <!-- /ko -->
-              </ul>
-          </div>
-        </div>
-      </div>
-      <!-- /ko -->
-    </header>
-    <main>
-      <article>
-        <div class="work gray center-content">
-          <h2 class="h2">Work Experience</h2>
-          <!-- ko foreach: jobList -->
-            <div class="row">
-              <div class="col-sm-12 col-md-12 col-lg-12">
-                <h4 class="h4" data-bind="text: employer"></h4>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-sm-8 col-md-8 col-lg-8">
-                <p class="date-text" data-bind="text: jobDates"></p>
-              </div>
-              <div class="col-sm-4 col-md-4 col-lg-4 text-right">
-                <p class="gray-text location-text" data-bind="text:jobLocation"></p>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-sm-12 col-md-12 col-lg-12">
-                <ul>
-                <!-- ko foreach: jobDescription -->
-                  <li data-bind="text: $data"></li>
-                  <!-- /ko -->
-                </ul>
-              </div>
-            </div>
-          <!-- /ko -->
-        </div>
-      </article>
-      <article>
-        <div class="projects center-content">
-              <h2 class="h2">Projects</h2>
-          <!-- ko foreach: projectsList -->
-          <div class="row">
-            <div class="col-sm-12 col-md-12 col-lg-12">
-                <a data-bind="attr: { href: projectURL}"><h4 class="h4" data-bind="text: projectTitle"></h4></a>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-sm-12 col-md-12 col-lg-12">
-              <p class="date-text" data-bind="text: projectDate"></p>
-            </div>
-          </div>
-          <div class="row">
-              <div class="col-sm-12 col-md-12 col-lg-12">
-                <ul>
-                <!-- ko foreach: projectDescription -->
-                  <li data-bind="text: $data"></li>
-                  <!-- /ko -->
-                </ul>
-              </div>
-            </div>
-          <div class="row">
-            <div class="col-sm-12 col-md-12 col-lg-12">
-              <img class="project-image" data-bind="attr: {src: projectImages}">
-            </div>
-          </div>
-          <!-- /ko -->
-        </div>
-      </article>
-      <article>
-        <div class="education gray center-content">
-          <h2 class="h2">Education</h2>
-          <!-- ko foreach: schoolList -->
-            <div class="row">
-              <div class="col-sm-12 col-md-12 col-lg-12">
-                  <a data-bind="attr: { href: schoolURL}"><h4 class="h4" data-bind="text: schoolName"></h4></a>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-sm-8 col-md-8 col-lg-8">
-                <p class="date-text" data-bind="text: schoolDates"></p>
-              </div>
-              <div class="col-sm-4 col-md-4 col-lg-4 text-right">
-                <p data-bind="text: schoolLocation"></p>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-sm-12 col-md-12 col-lg-12">
-                <p><span data-bind="text: degree"></span> degree in <span data-bind="text: majors"></span></p>
-              </div>
-            </div>
-          <!-- /ko -->
-            <div class="row">
-              <div class="col-sm-12 col-md-12 col-lg-12">
-                <h3 class="h3">Online Courses</h3>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-sm-12 col-md-12 col-lg-12">
-                <hr>
-              </div>
-            </div>
-          <!-- ko foreach: onlineCourseList -->
-            <div class="row">
-              <div class="col-sm-12 col-md-12 col-lg-12">
-                <h4 class="h4" data-bind="text: onlineCoursetitle"></h4>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-sm-12 col-md-12 col-lg-12">
-                <p data-bind="text: onlineCourseName"></p>
-                <p data-bind="text: onlineCourseDates"></p>
-                <a data-bind="attr: { href: onlineCourseURL}"><p data-bind="text: onlineCourseURL"></p></a>
-              </div>
-            </div>
-          <!-- /ko -->
-      </article>
-    </main>
-    <footer>
-      <div class="lets-connect center-content">
-        <div class="row">
-          <div class="col-sm-12 col-md-12 col-lg-12">
-            <h2 class="center-text h2">Let's Connect</h2>
-             <ul id="topContacts" class="flex-box">
-                <!-- ko foreach: bioList -->
-                  <li class="flex-item"><span class="dark-text">mobile</span><span class="gray-text" data-bind="text: bioMobile"></span></li>
-                  <li class="flex-item"><span class="dark-text">email</span><span class="gray-text" data-bind="text: bioEmail"></span></li>
-                  <li class="flex-item"><span class="dark-text">github</span><span class="gray-text" data-bind="text: bioGithub"></span></li>
-                  <li class="flex-item"><span class="dark-text">location</span><span class="gray-text" data-bind="text: bioLocation"></span></li>
-                <!-- /ko -->
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="copyright">
-          <div class="row">
-            <div class="col-sm-12 col-md-12 col-lg-12">
-              <p class="copyright-p">© 2018 Lisa Cowan. All rights reserved.</p>
-            </div>
-          </div>
-        </div>
-    </footer>
-  </div><!-- /container -->
 
-  <script src="js/jquery-3.2.1.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/knockout-3.2.0.js"></script>
-  <script src="js/app.js"></script>
+<body>
+    <div id="container">
+
+        <!-- header/bio section -->
+        <header>
+            <!-- ko foreach: bioList -->
+            <div id="header" class="header center-content clear-fix">
+                <div class="row">
+                    <div class="col-sm-12 col-md-12 col-lg-12">
+                        <h1 class="h1" data-bind="text: bioName"></h1><span class="role" data-bind="text: bioRole"></span>
+                        <hr>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 col-md-12 col-lg-12">
+                        <h2 class="text-center h2">Let's Connect</h2>
+                        <ul class="flex-box">
+                            <li class="flex-item"><span class="dark-text">mobile</span><span class="gray-text" data-bind="text: bioMobile"></span></li>
+                            <li class="flex-item"><span class="dark-text">email</span><span class="gray-text" data-bind="text: bioEmail"></span></li>
+                            <li class="flex-item"><span class="dark-text">github</span><span class="gray-text" data-bind="text: bioGithub"></span></li>
+                            <li class="flex-item"><span class="dark-text">location</span><span class="gray-text" data-bind="text: bioLocation"></span></li>
+                        </ul>
+                        <hr />
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-4 col-md-4 col-lg-4">
+                        <img class="biopic" src="" alt="Lisa Cowan" data-bind="attr: {src: biopic}">
+                    </div>
+                    <div class="col-sm-8 col-md-8 col-lg-8">
+                        <p class="welcome-message" data-bind="text: bioWelcomeMessage"></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 col-md-12 col-lg-12">
+                        <hr>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 col-md-12 col-lg-12">
+                        <h3 id="skills-h3" class="h3">Skills at a Glance:</h3>
+                        <ul class="flex-column">
+                            <!-- ko foreach: bioSkills -->
+                            <li class="flex-item" data-bind="text: $data"></li>
+                            <!-- /ko -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- /ko -->
+        </header>
+        <!-- /header/bio section. begin work section -->
+        <main>
+            <article>
+                <div class="work gray center-content">
+                    <h2 class="h2">Work Experience</h2>
+                    <!-- ko foreach: jobList -->
+                    <div class="row">
+                        <div class="col-sm-12 col-md-12 col-lg-12">
+                            <h4 class="h4" data-bind="text: employer"></h4>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-8 col-md-8 col-lg-8">
+                            <p class="date-text" data-bind="text: jobDates"></p>
+                        </div>
+                        <div class="col-sm-4 col-md-4 col-lg-4 text-right">
+                            <p class="gray-text location-text" data-bind="text:jobLocation"></p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12 col-md-12 col-lg-12">
+                            <ul>
+                                <!-- ko foreach: jobDescription -->
+                                <li data-bind="text: $data"></li>
+                                <!-- /ko -->
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- /ko -->
+                </div>
+            </article>
+
+            <!-- /work section. begin projects section -->
+            <article>
+                <div class="projects center-content">
+                    <h2 class="h2">Projects</h2>
+                    <!-- ko foreach: projectsList -->
+                    <div class="row">
+                        <div class="col-sm-12 col-md-12 col-lg-12">
+                            <a data-bind="attr: { href: projectURL}"><h4 class="h4" data-bind="text: projectTitle"></h4></a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12 col-md-12 col-lg-12">
+                            <p class="date-text" data-bind="text: projectDate"></p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12 col-md-12 col-lg-12">
+                            <ul>
+                                <!-- ko foreach: projectDescription -->
+                                <li data-bind="text: $data"></li>
+                                <!-- /ko -->
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12 col-md-12 col-lg-12">
+                            <img class="project-image" data-bind="attr: {src: projectImages}">
+                        </div>
+                    </div>
+                    <!-- /ko -->
+                </div>
+            </article>
+
+            <!-- /projects section. begin education section -->
+            <article>
+                <div class="education gray center-content">
+                    <h2 class="h2">Education</h2>
+                    <!-- ko foreach: schoolList -->
+                    <div class="row">
+                        <div class="col-sm-12 col-md-12 col-lg-12">
+                            <a data-bind="attr: { href: schoolURL}"><h4 class="h4" data-bind="text: schoolName"></h4></a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-8 col-md-8 col-lg-8">
+                            <p class="date-text" data-bind="text: schoolDates"></p>
+                        </div>
+                        <div class="col-sm-4 col-md-4 col-lg-4 text-right">
+                            <p data-bind="text: schoolLocation"></p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12 col-md-12 col-lg-12">
+                            <p><span data-bind="text: degree"></span> degree in <span data-bind="text: majors"></span></p>
+                        </div>
+                    </div>
+                    <!-- /ko -->
+                    <div class="row">
+                        <div class="col-sm-12 col-md-12 col-lg-12">
+                            <h3 class="h3">Online Courses</h3>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12 col-md-12 col-lg-12">
+                            <hr>
+                        </div>
+                    </div>
+                    <!-- ko foreach: onlineCourseList -->
+                    <div class="row">
+                        <div class="col-sm-12 col-md-12 col-lg-12">
+                            <h4 class="h4" data-bind="text: onlineCoursetitle"></h4>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12 col-md-12 col-lg-12">
+                            <p data-bind="text: onlineCourseName"></p>
+                            <p data-bind="text: onlineCourseDates"></p>
+                            <a data-bind="attr: { href: onlineCourseURL}">
+                                <p data-bind="text: onlineCourseURL"></p>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- /ko -->
+            </article>
+        </main>
+
+        <!-- /education section. begin footer section -->
+        <footer>
+            <div class="lets-connect center-content">
+                <div class="row">
+                    <div class="col-sm-12 col-md-12 col-lg-12">
+                        <h2 class="center-text h2">Let's Connect</h2>
+                        <ul class="flex-box">
+                            <!-- ko foreach: bioList -->
+                            <li class="flex-item"><span class="dark-text">mobile</span><span class="gray-text" data-bind="text: bioMobile"></span></li>
+                            <li class="flex-item"><span class="dark-text">email</span><span class="gray-text" data-bind="text: bioEmail"></span></li>
+                            <li class="flex-item"><span class="dark-text">github</span><span class="gray-text" data-bind="text: bioGithub"></span></li>
+                            <li class="flex-item"><span class="dark-text">location</span><span class="gray-text" data-bind="text: bioLocation"></span></li>
+                            <!-- /ko -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-sm-12 col-md-12 col-lg-12">
+                        <p class="copyright-p">© 2018 Lisa Cowan. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        </div>
+        <!-- /container -->
+
+        <script src="js/jquery-3.2.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/knockout-3.2.0.js"></script>
+        <script src="js/app.js"></script>
 </body>
+
 </html>
