@@ -163,14 +163,6 @@ var Project = function (data) {
 // Education data
 var schools = [
     {
-        schoolName: 'The University of Houston',
-        schoolLocation: 'Houston, TX',
-        degree: 'finished @ UT',
-        majors: ['Music'],
-        schoolDates: '1983-1985',
-        schoolURL: 'http://www.uh.edu/'
-    },
-    {
         schoolName: 'The University of Texas at Austin',
         schoolLocation: 'Austin, TX',
         degree: 'Bachelor\'s',
@@ -252,19 +244,21 @@ var ViewModel = function(data) {
 
     // EDUCATION SECTION
 
-    this.educationList = ko.observableArray([]);
+    this.schoolList = ko.observableArray([]);
 
     schools.forEach(function(school){
-        self.educationList.push( new Education(school));
+        self.schoolList.push( new Education(school));
     });
 
-    console.log('educationList ' + educationList());
+    console.log('schoolList ' + schoolList());
+
+    this.onlineCourseList = ko.observableArray([]);
 
     onlineCourses.forEach(function(onlineCourse){
-        self.educationList.push( new Education(onlineCourse));
+        self.onlineCourseList.push( new Education(onlineCourse));
     });
 
-    console.log('educationList ' + educationList());
+    console.log('onlineCourseList ' + onlineCourseList());
 
 };
 

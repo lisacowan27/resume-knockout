@@ -109,32 +109,46 @@
       <article>
         <div class="education gray center-content">
           <h2 class="h2">Education</h2>
-          <!-- ko foreach: educationList -->
+          <!-- ko foreach: schoolList -->
             <div class="row">
               <div class="col-sm-12 col-md-12 col-lg-12">
                   <a data-bind="attr: { href: schoolURL}"><h4 class="h4" data-bind="text: schoolName"></h4></a>
               </div>
-          </div>
-          <div class="row">
-            <div class="col-sm-8 col-md-8 col-lg-8">
-              <p class="date-text" data-bind="text: schoolDates"></p>
             </div>
-            <div class="col-sm-4 col-md-4 col-lg-4 text-right">
-              <p data-bind="text: schoolLocation"></p>
+            <div class="row">
+              <div class="col-sm-8 col-md-8 col-lg-8">
+                <p class="date-text" data-bind="text: schoolDates"></p>
+              </div>
+              <div class="col-sm-4 col-md-4 col-lg-4 text-right">
+                <p data-bind="text: schoolLocation"></p>
+              </div>
             </div>
-          </div>
-          <div class="row">
-            <div class="col-sm-12 col-md-12 col-lg-12">
-              <p data-bind="text: degree"></p>
+            <div class="row">
+              <div class="col-sm-12 col-md-12 col-lg-12">
+                <p><span data-bind="text: degree"></span> degree in <span data-bind="text: majors"></span></p>
+              </div>
             </div>
-          </div>
-          <div class="row">
-            <div class="col-sm-12 col-md-12 col-lg-12">
-              <p data-bind="text: majors"></p>
-            </div>
-          </div>
-
           <!-- /ko -->
+            <div class="row">
+              <div class="col-sm-12 col-md-12 col-lg-12">
+                <h3 class="h3">Online Courses</h3>
+              </div>
+            </div>
+          <!-- ko foreach: onlineCourseList -->
+            <div class="row">
+              <div class="col-sm-12 col-md-12 col-lg-12">
+                <h4 class="h4" data-bind="text: onlineCoursetitle"></h4>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-12 col-md-12 col-lg-12">
+                <p data-bind="text: onlineCourseName"></p>
+                <p data-bind="text: onlineCourseDates"></p>
+                <a data-bind="attr: { href: onlineCourseURL}"><p data-bind="text: onlineCourseURL"></p></a>
+              </div>
+            </div>
+          <!-- /ko -->
+
         </div>
       </article>
     </main>
