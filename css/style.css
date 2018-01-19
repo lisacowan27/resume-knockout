@@ -14,7 +14,7 @@ hr {
     margin-top: 15px;
     margin-bottom: 15px;
     border: 0;
-    border-top: 1px solid #ddd;
+    border-top: 1px dashed #ccc;
 }
 
 .work-entry {
@@ -135,9 +135,16 @@ Sections -- header
   border-radius: 20px;
 }
 
+.header ul {
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
 .welcome-message {
   color: #666;
   padding-top: 1em;
+  font-size: 1.2em;
+  line-height: 28px;
 }
 
 .flex-box {
@@ -146,10 +153,6 @@ Sections -- header
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
-}
-
-.flex-item {
-  padding: 0 10px;
 }
 
 .skills {
@@ -168,6 +171,7 @@ Sections -- header
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  padding-left: 0;
 }
 
 .skills .flex-item {
@@ -242,6 +246,11 @@ Sections -- let's connect
 
 .lets-connect .h2 {
   padding: 0.5em;
+}
+
+.lets-connect ul {
+  padding-left: 0;
+  margin-bottom: 0;
 }
 
 /* ------------------------------------------
