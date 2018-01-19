@@ -107,7 +107,6 @@ var jobs = [
     }
 ];
 
-
 // Initialize job data
 var Job = function (data) {
 
@@ -206,7 +205,6 @@ var Project = function (data) {
         this.projectImages = ko.observable(data.projectImages);
 };
 
-
 // Education data
 var schools = [
     {
@@ -227,6 +225,8 @@ var schools = [
     }
 ];
 
+
+// Online course data
 var onlineCourses = [
     {
         onlineCoursetitle: 'Front End Web Development',
@@ -256,58 +256,36 @@ var ViewModel = function(data) {
     // self will always map to the VM
     var self = this;
 
-    // BIO SECTION
-
+    // CREATE BIO OBSERVABLE ARRAY AND PUSH DATA
     this.bioList = ko.observableArray([]);
-
     bios.forEach(function(bio){
         self.bioList.push( new Bio(bio));
     });
 
-    console.log('bioList ' + bioList());
-
-
-
-    // WORK SECTION
-
-    // Create jobList Array for binding
+    // CREATE WORK OBSERVABLE ARRAY AND PUSH DATA
     this.jobList = ko.observableArray([]);
-
     jobs.forEach(function(job){
         self.jobList.push( new Job(job) );
     });
 
-    console.log('joblist ' + jobList());
-
-   // PROJECT SECTION
-
-    // Create projectList Array for binding
+    // CREATE PROJECT OBSERVABLE ARRAY AND PUSH DATA
     this.projectsList = ko.observableArray([]);
-
     projects.forEach(function(project){
         self.projectsList.push( new Project(project));
     });
-    console.log('projectsList ' + projectsList());
 
-    // EDUCATION SECTION
-
+    // CREATE SCHOOL OBSERVABLE ARRAY AND PUSH DATA
     this.schoolList = ko.observableArray([]);
-
     schools.forEach(function(school){
         self.schoolList.push( new Education(school));
     });
 
-    console.log('schoolList ' + schoolList());
-
+    // CREATE BIO ONLINE COURSES ARRAY AND PUSH DATA
     this.onlineCourseList = ko.observableArray([]);
-
     onlineCourses.forEach(function(onlineCourse){
         self.onlineCourseList.push( new Education(onlineCourse));
     });
-
-    console.log('onlineCourseList ' + onlineCourseList());
-
 };
 
-
+// Bind VM
 ko.applyBindings(ViewModel);
