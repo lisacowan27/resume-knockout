@@ -245,6 +245,21 @@ Sections -- let's connect
 }
 
 /* ------------------------------------------
+Sections -- copyright
+--------------------------------------------- */
+
+.copyright {
+  margin-bottom: 1em;
+  padding: 0 5%;
+  color: #999;
+}
+
+.copyright-p {
+  font-size: .75em;
+  color: #999;
+}
+
+/* ------------------------------------------
 Sections -- media queries
 --------------------------------------------- */
 
