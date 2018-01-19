@@ -10,19 +10,21 @@ body, p, li {
   font: normal 300 16px/24px 'Nunito Sans', sans-serif;
 }
 
+hr {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border: 0;
+    border-top: 1px solid #ddd;
+}
+
 .work-entry {
   padding: 0 5%;
   margin-bottom: 2%;
 }
 
-
 .project-entry {
   padding: 0 5%;
   margin-bottom: 3%;
-}
-
-hr {
-  color: #00b96f;
 }
 
 .date-text {
@@ -45,16 +47,16 @@ p {
 }
 
 a,
-a .h4 {
+a .h4,
+a p {
   color: #00b96f;
-  margin-top: 10px;
   display: block;
 }
 
 a:hover,
-a .h4:hover {
+a .h4:hover,
+a p:hover {
   color: #00b96f;
-  margin-top: 10px;
   display: block;
 }
 
