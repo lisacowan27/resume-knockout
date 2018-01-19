@@ -12,6 +12,7 @@
 <body>
   <div id="container">
     <header>
+      <!-- ko foreach: bioList -->
       <div id="header" class="header center-content clear-fix">
         <div class="row">
           <div class="col-sm-12 col-md-12 col-lg-12">
@@ -22,9 +23,9 @@
         <div class="row">
           <div class="col-sm-12 col-md-12 col-lg-12 flex-box">
             <ul id="topContacts" class="flex-box">
-              <li class="flex-item"><span class="dark-text">mobile</span><span class="gray-text" data-bind="text: mobile"></span></li>
-              <li class="flex-item"><span class="dark-text">email</span><span class="gray-text" data-bind="text: email"></span></li>
-              <li class="flex-item"><span class="dark-text">github</span><span class="gray-text" data-bind="text: github"></span></li>
+              <li class="flex-item"><span class="dark-text">mobile</span><span class="gray-text" data-bind="text: bioMobile"></span></li>
+              <li class="flex-item"><span class="dark-text">email</span><span class="gray-text" data-bind="text: bioEmail"></span></li>
+              <li class="flex-item"><span class="dark-text">github</span><span class="gray-text" data-bind="text: bioGithub"></span></li>
               <li class="flex-item"><span class="dark-text">location</span><span class="gray-text" data-bind="text: bioLocation"></span></li>
             </ul>
           </div>
@@ -39,11 +40,21 @@
         </div>
         <div class="row">
           <div class="col-sm-12 col-md-12 col-lg-12">
+            <hr>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12 col-md-12 col-lg-12">
             <h3 id="skills-h3" class="h3">Skills at a Glance:</h3>
-              <p data-bind="text: bioSkills"></p>
+              <ul class="flex-column">
+                <!-- ko foreach: bioSkills -->
+                  <li class="flex-item" data-bind="text: $data"></li>
+                <!-- /ko -->
+              </ul>
           </div>
         </div>
       </div>
+      <!-- /ko -->
     </header>
     <main>
       <article>
@@ -161,10 +172,13 @@
           <div class="col-sm-12 col-md-12 col-lg-12">
             <h2 class="center-text h2">Let's Connect</h2>
              <ul id="topContacts" class="flex-box">
-                  <li class="flex-item"><span class="dark-text">mobile</span><span class="gray-text" data-bind="text: mobile"></span></li>
-                  <li class="flex-item"><span class="dark-text">email</span><span class="gray-text" data-bind="text: email"></span></li>
-                  <li class="flex-item"><span class="dark-text">github</span><span class="gray-text" data-bind="text: github"></span></li>
-                  <li class="flex-item"><span class="dark-text">location</span><span class="gray-text" data-bind="text: bioLocation"></span></li></ul>
+                <!-- ko foreach: bioList -->
+                  <li class="flex-item"><span class="dark-text">mobile</span><span class="gray-text" data-bind="text: bioMobile"></span></li>
+                  <li class="flex-item"><span class="dark-text">email</span><span class="gray-text" data-bind="text: bioEmail"></span></li>
+                  <li class="flex-item"><span class="dark-text">github</span><span class="gray-text" data-bind="text: bioGithub"></span></li>
+                  <li class="flex-item"><span class="dark-text">location</span><span class="gray-text" data-bind="text: bioLocation"></span></li>
+                <!-- /ko -->
+              </ul>
             </div>
           </div>
         </div>

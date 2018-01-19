@@ -3,6 +3,53 @@
 // Global variables
 var ko;
 
+// Bio data
+var bios = [
+    {
+    bioName: 'Lisa Cowan',
+    bioRole: 'Front End Developer',
+    bioMobile: '512.468.4200',
+    bioEmail: 'cowan_lisa@att.net',
+    bioGithub: 'lisacowan27',
+    bioLocation: 'Austin, TX',
+    bioWelcomeMessage: 'I am a seasoned Front End Developer who can use web technologies from HTML tables with font tags to the latest Chrome optimization tools. I approach every project as a challenge and an opportunity to achieve flawless collaboration with my team members. Whether slicing up a Photoshop design for pixel-perfect HTML/CSS layout or constructing a site in the right CMS for the job, I create code that is responsive, clean and optimized.',
+    bioSkills: [
+        'HTML5',
+        'CSS3',
+        'PHP',
+        'MySQL',
+        'JavaScript',
+        'jQuery',
+        'Responsive development',
+        'WordPress',
+        'Drupal 7 & 8',
+        'Joomla!',
+        'Bootstrap',
+        '960 grid',
+        'Sublime Text',
+        'GitHub',
+        'Photoshop, Illustrator',
+        'Project management & organization',
+        'Requirements gathering',
+        'Information architecture'
+        ],
+    biopic: 'images/headshot_cowan.jpg'}
+];
+
+// Initialize bio data
+var Bio = function (data) {
+
+        this.bioName = ko.observable(data.bioName);
+        this.bioRole = ko.observable(data.bioRole);
+        this.bioMobile = ko.observable(data.bioMobile);
+        this.bioEmail = ko.observable(data.bioEmail);
+        this.bioGithub = ko.observable(data.bioGithub);
+        this.bioLocation = ko.observable(data.bioLocation);
+        this.bioWelcomeMessage = ko.observable(data.bioWelcomeMessage);
+        this.biopic = ko.observable(data.biopic);
+        this.bioSkills = ko.observableArray(data.bioSkills);
+    };
+
 // Work data
 var jobs = [
     {
@@ -210,15 +257,15 @@ var ViewModel = function(data) {
     var self = this;
 
     // BIO SECTION
-    self.bioName = ko.observable('Lisa Cowan');
-    self.bioRole = ko.observable('Front End Developer');
-    self.mobile = ko.observable('512.468.4200');
-    self.email = ko.observable('cowan_lisa@att.net');
-    self.github = ko.observable('lisacowan27');
-    self.bioLocation = ko.observable('Austin, TX');
-    self.bioWelcomeMessage = ko.observable('I am a seasoned Front End Developer who can use web ' +  'technologies from HTML tables with font tags to the latest Chrome optimization tools. ' + 'I approach every project as a challenge and an opportunity to achieve flawless collaboration ' + 'with my team members. Whether slicing up a Photoshop design for pixel-perfect HTML/CSS ' + 'layout or constructing a site in the right CMS for the job, I create code that is responsive, clean '+ 'and optimized.');
-    self.biopic = ko.observable('images/headshot_cowan.jpg');
-    self.bioSkills = ko.observable('HTML5, CSS3, PHP, MySQL, JavaScript, jQuery, Responsive development, WordPress, Drupal 7 & 8, Joomla!, Bootstrap, 960 grid, Sublime Text, GitHub, Photoshop, Illustrator, Project management & organization, Requirements gathering, Information architecture');
+
+    this.bioList = ko.observableArray([]);
+
+    bios.forEach(function(bio){
+        self.bioList.push( new Bio(bio));
+    });
+
+    console.log('bioList ' + bioList());
+
 
 
     // WORK SECTION
