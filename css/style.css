@@ -278,27 +278,20 @@ Sections -- media queries
   }
 }
 
-@media only screen and (max-width: 768px) {
-  .biopic {
-    width: 150px;
-  }
-
-  .skills-h3 {
-    margin-top: 2em;
-    padding-left: 5%;
-  }
-
-  .flex-column {
-    padding-left: 5%;
-  }
-
-  .project-entry img {
-    width: 400px;
-    height: auto;
-  }
-}
 
 @media only screen and (max-width: 600px) {
+
+  body,
+  p,
+  li,
+  span {
+    font-size: 18px;
+  }
+
+  .center-content {
+    padding: 2% 5%;
+  }
+
   .h1 {
     display: block;
   }
@@ -309,18 +302,29 @@ Sections -- media queries
 
   .welcome-message {
     display: block;
-    margin: 0 5%;
   }
 
   .header .flex-item, .lets-connect .flex-item {
     padding: 0 2%;
   }
+
+  .skills .flex-item {
+    padding: 0;
+    width: 40%;
+  }
+
+  .work ul,
+  .projects ul {
+    padding-left: 20px;
+  }
+
+  .project-image {
+    width: 400px;
+    height: auto;
+  }
 }
 
 @media only screen and (max-width: 500px) {
-  .skills-h3 {
-    margin-top: 0;
-  }
 
   .flex-column {
     display: block;
@@ -333,11 +337,5 @@ Sections -- media queries
 }
 
 @media only screen and (max-width: 414px) {
-  .project-entry img {
-    display: none;
-  }
 
-  #mapDiv {
-    display: none;
-  }
 }

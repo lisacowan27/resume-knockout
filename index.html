@@ -53,7 +53,7 @@
                 <div class="row">
                     <div class="col-sm-12 col-md-12 col-lg-12">
                         <h3 id="skills-h3" class="h3">Skills at a Glance:</h3>
-                        <ul class="flex-column">
+                        <ul class="flex-column skills">
                             <!-- ko foreach: bioSkills -->
                             <li class="flex-item" data-bind="text: $data"></li>
                             <!-- /ko -->
@@ -75,10 +75,10 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-sm-8 col-md-8 col-lg-8">
+                        <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
                             <p class="date-text" data-bind="text: jobDates"></p>
                         </div>
-                        <div class="col-sm-4 col-md-4 col-lg-4 text-right">
+                        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 text-right">
                             <p class="gray-text location-text" data-bind="text:jobLocation"></p>
                         </div>
                     </div>
@@ -154,14 +154,15 @@
                     <!-- /ko -->
                     <div class="row">
                         <div class="col-sm-12 col-md-12 col-lg-12">
-                            <h3 class="h3">Online Courses</h3>
+                            <hr>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-sm-12 col-md-12 col-lg-12">
-                            <hr>
+                            <h3 class="h3">Online Courses</h3>
                         </div>
                     </div>
+
                     <!-- ko foreach: onlineCourseList -->
                     <div class="row">
                         <div class="col-sm-12 col-md-12 col-lg-12">
