@@ -12,12 +12,12 @@
 </head>
 
 <body>
-    <div id="container">
+    <div class="container">
 
         <!-- header/bio section -->
         <header>
             <!-- ko foreach: bioList -->
-            <div id="header" class="header center-content clear-fix">
+            <div class="header center-content clear-fix">
                 <div class="row">
                     <div class="col-sm-12 col-md-12 col-lg-12">
                         <h1 class="h1" data-bind="text: bioName"></h1><span class="role" data-bind="text: bioRole"></span>
@@ -52,7 +52,7 @@
                 </div>
                 <div class="row">
                     <div class="col-sm-12 col-md-12 col-lg-12">
-                        <h3 id="skills-h3" class="h3">Skills at a Glance:</h3>
+                        <h3 class="h3">Skills at a Glance:</h3>
                         <ul class="flex-column skills">
                             <!-- ko foreach: bioSkills -->
                             <li class="flex-item" data-bind="text: $data"></li>
