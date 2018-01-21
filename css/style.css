@@ -110,7 +110,6 @@ Headers
   font-size: 24px;
   color: #1199c3;
   line-height: 29px;
-  padding: 0 10px 0 0;
   margin-top: .5em;
 }
 
@@ -244,10 +243,6 @@ Sections -- let's connect
   border-radius: 20px;
 }
 
-.lets-connect .h2 {
-  padding: 0.5em;
-}
-
 .lets-connect ul {
   padding-left: 0;
   margin-bottom: 0;
@@ -326,16 +321,43 @@ Sections -- media queries
 
 @media only screen and (max-width: 500px) {
 
+  .header .h2, {
+    text-align: left;
+  }
+
+  .flex-box,
+  .lets-connect .flex-box {
+    display: block;
+  }
+
   .flex-column {
     display: block;
     height: 100%;
   }
 
-  .flex-column .flex-item {
+  .header .flex-item,
+  .lets-connect .flex-item {
     padding: 0;
+  }
+
+  .skills .flex-item {
+    width: 100%;
+  }
+
+  .lets-connect {
+    text-align: left;
   }
 }
 
 @media only screen and (max-width: 414px) {
+  .project-image {
+    width: 300px;
+    height: auto;
+  }
+}
 
+@media only screen and (max-width: 414px) {
+  .project-image {
+    display: none;
+  }
 }
